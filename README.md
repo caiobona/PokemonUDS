@@ -14,7 +14,7 @@ Assim que baixar o projeto, abra um terminal na pasta raiz do projeto e envie o 
 
 Este último, é responsável por armazenar localmente os decks gravados pelo usuário, simulando uma API.
 Para iniciar o projeto angular, se dirija até a raiz do projeto e  rode ``npm start`` ou ``ng serve``, fica a sua preferencia e ambos tem o mesmo resultado.
-Para finalizar as configurações, entre no diretório  ``/apifake``pelo terminal e digite ``json-server --watch db.json``.
-Nossa API-FAKE estará ligada e  rodando na porta 3000.
+Para finalizar as configurações, entre no diretório  ``/api``pelo terminal e digite ``json-server --watch db.json``.
+Nossa API estará ligada e  rodando na porta 3000.
 
 Faça bom uso.
