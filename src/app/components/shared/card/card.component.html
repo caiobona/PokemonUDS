@@ -1,0 +1,13 @@
+<div class="flex-row items-center justify-center bg-transparent">
+    <img [src]="data.img" alt="">
+
+    <div class="btns p-2 flex items-center justify-around" style="background-color: #FFF; margin-bottom: 25px">
+      <div class="text-center mt-10">
+        <button (click)="addCard()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Adicionar</button>
+      </div>
+      <div class="text-center mt-10">
+        <button (click)="closeCard()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Cancelar</button>
+      </div>
+    </div>
+</div>
+

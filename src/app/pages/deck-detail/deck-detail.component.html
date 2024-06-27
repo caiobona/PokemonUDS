@@ -1,0 +1,12 @@
+<div class="background-image">
+  <button (click)="goHome()" class="m-4" style="padding-top: 30px;padding-bottom: 30px; color: black;" mat-raised-button>Voltar ao menu principal</button>
+@if(exibeMsg){
+  <div class="flex space-x-4 justify-center p-8">
+      <span class="font-extrabold text-3xl text-center" style="color: #ffcb08;" >Você ainda não adicionou nenhum deck</span>
+
+  </div>
+}
+  <div class="flex items-center justify-center">
+    <app-one-deck *ngFor="let deck of decks" [deck]="deck" [cards]="deck.cards" [nameDeck]="deck.name"></app-one-deck>
+  </div>
+</div>

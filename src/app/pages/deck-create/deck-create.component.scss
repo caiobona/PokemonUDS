@@ -1,0 +1,31 @@
+.scroll {
+    max-height: 60%;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.background-image {
+  background-image: url('../../../assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 50;
+}
+
+.card{
+    height: 260px;
+    margin-bottom: 3rem;
+}
+
+.mat-table {
+    background-color: transparent;
+  }
+

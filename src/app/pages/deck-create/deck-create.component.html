@@ -1,0 +1,43 @@
+<div class="background-image">
+  <button (click)="goHome()" class="m-4" style="padding-top: 30px;padding-bottom: 30px; color: black;" mat-raised-button>Voltar ao menu principal</button>
+  <div class="flex items-center justify-center">
+    <div class="flex space-x-4 justify-center p-8" style="align-items: center;">
+      <button (click)="onBeforePage()" mat-fab style="background-color: #ffcb08; color: white;">
+        <mat-icon>navigate_before</mat-icon>
+      </button>
+     @if(spinner() && exibe_title()){
+
+       <span class="font-extrabold text-3xl text-center" style="color: #ffcb08;">Carregando</span>
+     }
+      <div class="scroll">
+        <div class="flex flex-wrap -mx-4 container p-4">
+          <div  *ngFor="let item of deckCards()" class="w-full md:w-1/2 lg:w-1/5 px-4 mb-4">
+            <img (click)="addCard(item)" [src]="item.images.small" class="w-36 h-auto">
+          </div>
+      </div>
+      </div>
+      @if(exibeFiltro()){
+        <div style="height: 350px; position: fixed; right: 50px;" class="info-deck bg-white p-8 shadow-md rounded-md">
+          <mat-form-field>
+            <mat-label>Nome do Deck</mat-label>
+            <input  [(ngModel)]="nameDeck"  matInput placeholder="Nome do Deck" #input>
+          </mat-form-field><br>
+          <mat-form-field>
+            <mat-label>Filtrar  Carta</mat-label>
+            <input (keyup.enter)="getCardByName()" [(ngModel)]="userInput" matInput placeholder="Presisone ENTER" #input>
+          </mat-form-field>
+          <h3 class="text-center">Cartas Adicionadas: {{contadorCards()}}</h3>
+          <div class="flex w-full justify-around">
+            <button class="mt-14" (click)="createDeck()" style="background-color: #004a94; color: white;" mat-raised-button>Salvar Deck <mat-icon aria-hidden="false" fontIcon="add_circle"></mat-icon></button>
+          </div>
+        </div>
+      }
+      <button (click)="onNextPage()" mat-fab style="background-color: #ffcb08; color: white;">
+        <mat-icon>navigate_next</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div >
+    <h1 style="align-items: center; justify-content: center; justify-items: center;"  class="text-center mt-2">Página {{contadorPage}} de 717</h1>
+  </div>
+</div>
